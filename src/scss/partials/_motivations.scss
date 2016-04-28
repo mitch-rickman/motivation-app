@@ -1,10 +1,15 @@
 .motivations {
+    color: $text;
     &__item {
-        background: green;
+        background: #efefef;
+        border-radius: 4px;
+        padding: 2rem;
     }
 
     &__title {
-
+        font-size: 2rem;
+        margin-bottom: .5rem;
+        color: $text;
     }
 
     &__meta {

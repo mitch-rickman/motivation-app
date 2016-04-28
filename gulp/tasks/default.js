@@ -14,6 +14,4 @@ gulp.task('watch', function() {
     watch(config.templates.src, function() {
         gulp.start('build:templates');
     });
-    // gulp.watch(config.css.src, ['build:sass']);
-    // gulp.watch(config.templates.src, ['build:templates']);
 });
