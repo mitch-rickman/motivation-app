@@ -16,11 +16,106 @@
                     <li class="motivations__item">
                         <h2 class="motivations__title">Get up and walk a bit</h2>
                         <div class="motivations__meta">
-                            <strong>Motivation reoccurrence: </strong>
+                            Every <strong>hour</strong> starting at <strong>9:00 AM</strong> and ending at <strong>5:00PM</strong>
+                        </div>
+                    </li>
+
+                    <li class="motivations__item">
+                        <h2 class="motivations__title">Hit the gym</h2>
+                        <div class="motivations__meta">
+                            Every <strong>day</strong> at <strong>7:00 AM</strong>
+                        </div>
+                    </li>
+
+                    <li class="motivations__item">
+                        <h2 class="motivations__title">Read</h2>
+                        <div class="motivations__meta">
+                            Every <strong>week</strong> at <strong>9:00 AM</strong> on <strong>Sunday</strong>
+                        </div>
+                    </li>
+
+                    <li class="motivations__item">
+                        <h2 class="motivations__title">Get the furance serviced</h2>
+                        <div class="motivations__meta">
+                            Every <strong>year</strong> on <strong>March 3rd</strong> at <strong>9:00 AM</strong>
                         </div>
                     </li>
                 </ul>
+                <div>
+                    <button class="button">Add reminder</button>
+                </div>
             </main>
+        </div>
+
+        <div class="editor">
+            <div class="editor__content">
+                <form class="form" action="">
+                    <div class="form__input-wrap">
+                        <label for="">What do you need to remember?</label>
+                        <input type="text">
+                    </div>
+                    <div class="form__input-wrap">
+                        <label for="">How often do you need to be reminded?</label>
+                        <select name="" id="">
+                            <option value="">Hourly</option>
+                            <option value="">Daily</option>
+                            <option value="">Montly</option>
+                            <option value="">Yearly</option>
+                        </select>
+                    </div>
+
+                    <!-- HOURLY  -->
+                    <div class="form__input-wrap">
+                        <label for="">When do you want to start?</label>
+                        <input type="time">
+                    </div>
+
+                    <div class="form__input-wrap">
+                        <label for="">When do you want to stop?</label>
+                        <input type="time">
+                    </div>
+                    <!-- END HOURLY  -->
+
+                    <!-- DAILY  -->
+                    <div class="form__input-wrap">
+                        <label for="">What time?</label>
+                        <input type="time">
+                    </div>
+                    <!-- END DAILY  -->
+
+                    <!-- WEEKLY  -->
+                    <div class="form__input-wrap">
+                        <label for="">What day?</label>
+                        <select name="" id="">
+                            <option value="">Sunday</option>
+                            <option value="">Monday</option>
+                            <option value="">Tuesday</option>
+                            <option value="">Wednesday</option>
+                            <option value="">Thursday</option>
+                            <option value="">Friday</option>
+                            <option value="">Saturday</option>
+                        </select>
+                    </div>
+                    <div class="form__input-wrap">
+                        <label for="">What time?</label>
+                        <input type="time">
+                    </div>
+                    <!-- END WEEKLY  -->
+
+                    <!-- YEARLY  -->
+                    <div class="form__input-wrap">
+                        <label for="">What day?</label>
+                        <input type="date">
+                    </div>
+                    <div class="form__input-wrap">
+                        <label for="">What time?</label>
+                        <input type="time">
+                    </div>
+                    <!-- END YEARLY  -->
+
+                    <input type="submit" class="button">
+                </form>
+            </div>
         </div>
     </body>
 </html>
