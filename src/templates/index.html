@@ -50,70 +50,123 @@
         <div class="editor">
             <div class="editor__content">
                 <form class="form" action="">
-                    <div class="form__input-wrap">
-                        <label for="">What do you need to remember?</label>
-                        <input type="text">
-                    </div>
-                    <div class="form__input-wrap">
-                        <label for="">How often do you need to be reminded?</label>
-                        <select name="" id="">
-                            <option value="">Hourly</option>
-                            <option value="">Daily</option>
-                            <option value="">Montly</option>
-                            <option value="">Yearly</option>
-                        </select>
+                    <div class="slideshow">
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">What do you need to remember?</label>
+                                <input type="text" placeholder="Ex: Mow the lawn">
+                            </div>
+                        </div>
+
+                        <div class="slideshow__slide active">
+                            <div class="form__input-wrap">
+                                <label for="">How often do you need to be reminded?</label>
+                                <div class="container--fluid">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="form__input-wrap">
+                                                <button class="button--fluid button--secondary">Hourly</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form__input-wrap">
+                                                <button class="button--fluid button--secondary">Daily</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="form__input-wrap">
+                                                <button class="button--fluid  button--secondary">Monthly</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form__input-wrap">
+                                                <button class="button--fluid  button--secondary">Yearly</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HOURLY  -->
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">When do you want to start?</label>
+                                <input type="time">
+                            </div>
+
+                            <div class="form__input-wrap">
+                                <label for="">When do you want to stop?</label>
+                                <input type="time">
+                            </div>
+                        </div>
+                        <!-- END HOURLY  -->
+
+                        <!-- DAILY  -->
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">What time?</label>
+                                <input type="time">
+                            </div>
+                        </div>
+                        <!-- END DAILY  -->
+
+                        <!-- WEEKLY  -->
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">What day?</label>
+                                <select name="" id="">
+                                    <option value="">Sunday</option>
+                                    <option value="">Monday</option>
+                                    <option value="">Tuesday</option>
+                                    <option value="">Wednesday</option>
+                                    <option value="">Thursday</option>
+                                    <option value="">Friday</option>
+                                    <option value="">Saturday</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">What time?</label>
+                                <input type="time">
+                            </div>
+                        </div>
+                        <!-- END WEEKLY  -->
+
+                        <!-- YEARLY  -->
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">What day?</label>
+                                <input type="date">
+                            </div>
+                        </div>
+
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">What time?</label>
+                                <input type="time">
+                            </div>
+                        </div>
+                        <!-- END YEARLY  -->
                     </div>
 
-                    <!-- HOURLY  -->
-                    <div class="form__input-wrap">
-                        <label for="">When do you want to start?</label>
-                        <input type="time">
+                    <div class="form__footer">
+                        <div class="container--fluid">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <button class="button button--fluid">Back</button>
+                                </div>
+                                <div class="col-xs-6">
+                                    <button class="button--primary button--fluid" disabled>Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="button">
                     </div>
-
-                    <div class="form__input-wrap">
-                        <label for="">When do you want to stop?</label>
-                        <input type="time">
-                    </div>
-                    <!-- END HOURLY  -->
-
-                    <!-- DAILY  -->
-                    <div class="form__input-wrap">
-                        <label for="">What time?</label>
-                        <input type="time">
-                    </div>
-                    <!-- END DAILY  -->
-
-                    <!-- WEEKLY  -->
-                    <div class="form__input-wrap">
-                        <label for="">What day?</label>
-                        <select name="" id="">
-                            <option value="">Sunday</option>
-                            <option value="">Monday</option>
-                            <option value="">Tuesday</option>
-                            <option value="">Wednesday</option>
-                            <option value="">Thursday</option>
-                            <option value="">Friday</option>
-                            <option value="">Saturday</option>
-                        </select>
-                    </div>
-                    <div class="form__input-wrap">
-                        <label for="">What time?</label>
-                        <input type="time">
-                    </div>
-                    <!-- END WEEKLY  -->
-
-                    <!-- YEARLY  -->
-                    <div class="form__input-wrap">
-                        <label for="">What day?</label>
-                        <input type="date">
-                    </div>
-                    <div class="form__input-wrap">
-                        <label for="">What time?</label>
-                        <input type="time">
-                    </div>
-                    <!-- END YEARLY  -->
-
-                    <input type="submit" class="button">
                 </form>
             </div>
         </div>

@@ -13,4 +13,40 @@
     &:hover, &:active {
         background: darken($grey--light, 10%);
     }
+
+    &--primary {
+        @extend .button;
+
+        background: lighten($highlight, 15%);
+        color: #fff;
+
+        &:hover, &:active {
+            background: $highlight;
+        }
+
+        &:disabled {
+            cursor: auto;
+            opacity: .4;
+
+            &:hover, &:active {
+                background: lighten($highlight, 15%);
+            }
+        }
+    }
+
+    &--secondary {
+        @extend .button;
+        background: #fff;
+        border: 2px solid $grey--light;
+
+        &:hover, &:active, &.active {
+            background: $grey--light;
+        }
+    }
+
+    &--fluid {
+        @extend .button;
+
+        width: 100%;
+    }
 }

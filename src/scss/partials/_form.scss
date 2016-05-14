@@ -1,15 +1,30 @@
 .form {
     label {
         display: block;
-        margin-bottom: .25em;
+        font-size: 1.5em;
+        margin-bottom: .5em;
     }
 
-    input {
+    input, select {
+        background: #fff;
+        border: 1px solid $grey;
+        border-radius: 0;
+        display: block;
+        box-sizing: border-box;
         width: 100%;
+        padding: .5em;
+        font-size: 1.25em;
+        outline: none;
+
+        &[type="text"] {
+
+        }
     }
 
     select {
         width: 100%;
+        font-size: 1.25em;
+
     }
 
     &__input-wrap {
