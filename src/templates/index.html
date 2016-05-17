@@ -58,7 +58,7 @@
                             </div>
                         </div>
 
-                        <div class="slideshow__slide active">
+                        <div class="slideshow__slide">
                             <div class="form__input-wrap">
                                 <label for="">How often do you need to be reminded?</label>
                                 <div class="container--fluid">
@@ -94,12 +94,12 @@
                         <div class="slideshow__slide">
                             <div class="form__input-wrap">
                                 <label for="">When do you want to start?</label>
-                                <input type="time">
+                                <input type="text" class="time-input" value="9:00 AM">
                             </div>
 
                             <div class="form__input-wrap">
                                 <label for="">When do you want to stop?</label>
-                                <input type="time">
+                                <input type="text" class="time-input" value="5:00 PM">
                             </div>
                         </div>
                         <!-- END HOURLY  -->
@@ -108,7 +108,7 @@
                         <div class="slideshow__slide">
                             <div class="form__input-wrap">
                                 <label for="">What time?</label>
-                                <input type="time">
+                                <input type="text" class="time-input" value="9:00 AM">
                             </div>
                         </div>
                         <!-- END DAILY  -->
@@ -117,28 +117,30 @@
                         <div class="slideshow__slide">
                             <div class="form__input-wrap">
                                 <label for="">What day?</label>
-                                <select name="" id="">
-                                    <option value="">Sunday</option>
-                                    <option value="">Monday</option>
-                                    <option value="">Tuesday</option>
-                                    <option value="">Wednesday</option>
-                                    <option value="">Thursday</option>
-                                    <option value="">Friday</option>
-                                    <option value="">Saturday</option>
-                                </select>
+                                <div class="form__select">
+                                    <select name="" id="">
+                                        <option value="">Sunday</option>
+                                        <option value="">Monday</option>
+                                        <option value="">Tuesday</option>
+                                        <option value="">Wednesday</option>
+                                        <option value="">Thursday</option>
+                                        <option value="">Friday</option>
+                                        <option value="">Saturday</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
 
                         <div class="slideshow__slide">
                             <div class="form__input-wrap">
                                 <label for="">What time?</label>
-                                <input type="time">
+                                <input type="text" class="time-input" value="9:00 AM">
                             </div>
                         </div>
                         <!-- END WEEKLY  -->
 
                         <!-- YEARLY  -->
-                        <div class="slideshow__slide">
+                        <div class="slideshow__slide active">
                             <div class="form__input-wrap">
                                 <label for="">What day?</label>
                                 <input type="date">
@@ -148,7 +150,7 @@
                         <div class="slideshow__slide">
                             <div class="form__input-wrap">
                                 <label for="">What time?</label>
-                                <input type="time">
+                                <input type="text" class="time-input" value="9:00 AM">
                             </div>
                         </div>
                         <!-- END YEARLY  -->

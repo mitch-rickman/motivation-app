@@ -39,9 +39,21 @@
         background: #fff;
         border: 2px solid $grey--light;
 
-        &:hover, &:active, &.active {
+        &:hover, &:active {
             background: $grey--light;
         }
+
+        &.active {
+            background: lighten($highlight, 15%);
+            border-color: lighten($highlight, 15%);
+            color: #fff;
+        }
+    }
+
+    &--fixed {
+        @extend .button;
+
+        width: 150px;
     }
 
     &--fluid {

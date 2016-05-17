@@ -4,6 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
+    "angular": "^1.5.5",
     "autoprefixer": "^6.3.6",
     "bootstrap-sass": "^3.3.6",
     "css-mqpacker": "^4.0.1",
@@ -11,7 +12,7 @@
     "gulp-postcss": "^6.1.0",
     "node-sass": "^3.4.2",
     "postcss-scss": "^0.1.7",
-    "require-dir": "^0.3.0",
+    "require-dir": "^0.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
