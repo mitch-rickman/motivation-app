@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="reminderApp">
     <head>
         <title>Motivation App</title>
         <link rel="stylesheet" href="css/main.css">
@@ -12,8 +12,14 @@
                 </div>
             </header>
             <main class="container">
-                <ul class="motivations">
-                    <li class="motivations__item">
+                <ul class="motivations" ng-controller="reminderList as reminderList">
+                    <li class="motivations__item" ng-repeat="reminder in reminderList.reminders">
+                        <h2 class="motivations__title">{{reminder.name}}</h2>
+                        <div class="motivations__meta">
+                            Every <strong>{{reminder.timeframe.increment}}</strong> starting at <strong>9:00 AM</strong> and ending at <strong>5:00PM</strong>
+                        </div>
+                    </li>
+                    <!-- <li class="motivations__item">
                         <h2 class="motivations__title">Get up and walk a bit</h2>
                         <div class="motivations__meta">
                             Every <strong>hour</strong> starting at <strong>9:00 AM</strong> and ending at <strong>5:00PM</strong>
@@ -39,7 +45,7 @@
                         <div class="motivations__meta">
                             Every <strong>year</strong> on <strong>March 3rd</strong> at <strong>9:00 AM</strong>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
                 <div>
                     <button class="button">Add reminder</button>
@@ -172,5 +178,7 @@
                 </form>
             </div>
         </div>
+
+        <script src="js/main.js"></script>
     </body>
 </html>
