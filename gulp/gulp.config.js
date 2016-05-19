@@ -12,6 +12,7 @@ module.exports = {
 
     js: {
         entry: "./src/js/main.js",
+        src: "./src/js/**/*.js",
         build: "./build/js"
     }
 }
