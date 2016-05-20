@@ -12,41 +12,34 @@
                 </div>
             </header>
             <main class="container">
+                
                 <ul class="motivations" ng-controller="reminderList as reminderList">
                     <li class="motivations__item" ng-repeat="reminder in reminderList.reminders">
                         <h2 class="motivations__title">{{reminder.name}}</h2>
                         <div class="motivations__meta">
-                            Every <strong>{{reminder.timeframe.increment}}</strong> starting at <strong>9:00 AM</strong> and ending at <strong>5:00PM</strong>
-                        </div>
-                    </li>
-                    <!-- <li class="motivations__item">
-                        <h2 class="motivations__title">Get up and walk a bit</h2>
-                        <div class="motivations__meta">
-                            Every <strong>hour</strong> starting at <strong>9:00 AM</strong> and ending at <strong>5:00PM</strong>
-                        </div>
-                    </li>
+                            <span ng-if="reminder.increment=='hour'">
+                                Every <strong>{{reminder.increment}}</strong> starting at <strong>{{reminder.meta.start}}</strong> and ending at <strong>{{reminder.meta.end}}</strong>
+                            </span>
 
-                    <li class="motivations__item">
-                        <h2 class="motivations__title">Hit the gym</h2>
-                        <div class="motivations__meta">
-                            Every <strong>day</strong> at <strong>7:00 AM</strong>
+                            <span ng-if="reminder.increment=='day'">
+                                Every <strong>{{reminder.increment}}</strong> at <strong>{{reminder.meta.time}}</strong>
+                            </span>
+
+                            <span ng-if="reminder.increment=='week'">
+                                Every <strong>{{reminder.increment}}</strong> on <strong>{{reminder.meta.day}}</strong> at <strong>{{reminder.meta.time}}</strong>
+                            </span>
+
+                            <span ng-if="reminder.increment=='month'">
+                                Every <strong>{{reminder.increment}}</strong> on the <strong>{{reminder.meta.day | ordinal}}</strong> at <strong>{{reminder.meta.time}}</strong>
+                            </span>
+
+                            <span ng-if="reminder.increment=='year'">
+                                Every <strong>{{reminder.increment}}</strong> on <strong>{{reminder.meta.month}} {{reminder.meta.day | ordinal}}</strong> at <strong>{{reminder.meta.time}}</strong>
+                            </span>
                         </div>
                     </li>
-
-                    <li class="motivations__item">
-                        <h2 class="motivations__title">Read</h2>
-                        <div class="motivations__meta">
-                            Every <strong>week</strong> at <strong>9:00 AM</strong> on <strong>Sunday</strong>
-                        </div>
-                    </li>
-
-                    <li class="motivations__item">
-                        <h2 class="motivations__title">Get the furance serviced</h2>
-                        <div class="motivations__meta">
-                            Every <strong>year</strong> on <strong>March 3rd</strong> at <strong>9:00 AM</strong>
-                        </div>
-                    </li> -->
                 </ul>
+
                 <div>
                     <button class="button">Add reminder</button>
                 </div>
