@@ -2,22 +2,22 @@
 module.exports = {
     css: {
         src: ["./src/scss/**/*.scss"],
-        build: "./build/css/"
+        build: "./build/public/css/"
     },
 
     templates: {
         src: ["./src/templates/**/*.*"],
-        build: "./build/"
+        build: "./build/public"
     },
 
     js: {
         entry: ["./src/js/main.js", "./src/api/api-entry.js"],
         src: "./src/js/**/*.js",
-        build: "./build/js"
+        build: "./build/public/js"
     },
 
     api: {
-        src: ['./src/api/api.js'],
+        src: ['./src/api/**/*.js'],
         build: "./build"
     }
 }
