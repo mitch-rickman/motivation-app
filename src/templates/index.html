@@ -12,7 +12,7 @@
                 </div>
             </header>
             <main class="container">
-                
+
                 <ul class="motivations" ng-controller="reminderList as reminderList">
                     <li class="motivations__item" ng-repeat="reminder in reminderList.reminders">
                         <h2 class="motivations__title">{{reminder.name}}</h2>
@@ -48,9 +48,9 @@
 
         <div class="editor">
             <div class="editor__content">
-                <form class="form" action="">
-                    <div class="slideshow">
-                        <div class="slideshow__slide">
+                <div class="form">
+                    <div id="slideshow" class="slideshow">
+                        <div class="slideshow__slide active">
                             <div class="form__input-wrap">
                                 <label for="">What do you need to remember?</label>
                                 <input type="text" placeholder="Ex: Mow the lawn">
@@ -139,7 +139,7 @@
                         <!-- END WEEKLY  -->
 
                         <!-- YEARLY  -->
-                        <div class="slideshow__slide active">
+                        <div class="slideshow__slide">
                             <div class="form__input-wrap">
                                 <label for="">What day?</label>
                                 <input type="date">
@@ -159,16 +159,16 @@
                         <div class="container--fluid">
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <button class="button button--fluid">Back</button>
+                                    <button id="form-prev" class="button button--fluid">Back</button>
                                 </div>
                                 <div class="col-xs-6">
-                                    <button class="button--primary button--fluid" disabled>Next</button>
+                                    <button id="form-next" class="button--primary button--fluid">Next</button>
                                 </div>
                             </div>
                         </div>
                         <input type="submit" class="button">
                     </div>
-                </form>
+                </div>
             </div>
         </div>
 
