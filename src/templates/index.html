@@ -156,17 +156,22 @@
                     </div>
 
                     <div class="form__footer">
-                        <div class="container--fluid">
+                        <div class="container--fluid form__footer-controls">
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <button id="form-prev" class="button button--fluid">Back</button>
+                                    <div class="form__input-wrap">
+                                        <button id="form-prev" class="button--fluid button--secondary--light" disabled>Back</button>
+                                    </div>
                                 </div>
                                 <div class="col-xs-6">
-                                    <button id="form-next" class="button--primary button--fluid">Next</button>
+                                    <div class="form__input-wrap">
+                                        <button id="form-next" class="button--fluid button--secondary-light">Next</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <input type="submit" class="button">
+
+                        <button id="form-submit" class="button--primary button--fluid" disabled>Submit</button>
                     </div>
                 </div>
             </div>

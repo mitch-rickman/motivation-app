@@ -15,6 +15,11 @@
 
         &.active {
             left: 0;
+            z-index: 2;
+        }
+
+        &.old {
+            left: -110%;
             z-index: 1;
         }
     }

@@ -5,45 +5,60 @@
 function slideshow( container, slideClass) {
     let slides;
 
+    let self = this;
+
     /*
     * goto next slide
-    * @return: return index of slide transitioning to
+    * @return: return index of slide transitioning to or false
     */
+
     this.nextSlide = function() {
-        for ( let i = 0, n = slides.length; i < n; i++ ) {
-            if ( slides[i].classList.contains("active") ) {
-                slides[i].classList.remove("active");
-                slides[i + 1].classList.add("active");
-                return i + 1;
-            }
+        let i = getCurrentIndex();
+
+        if ( i < slides.length - 1 ) {
+            slides[i].classList.remove("active")
+            slides[i].classList.add("old");
+            slides[i + 1].classList.add("active");
+
+            return true;
         }
-        console.log("slideshow.next");
+
+        return false;
     }
 
     /*
     * goto previous slide
-    * @return: return index of slide transitioning to
+    * @return: return index of slide transitioning to or false
     */
     this.previousSlide = function() {
-        for ( let i = 0, n = slides.length; i < n; i++ ) {
-            if ( slides[i].classList.contains("active") ) {
-                slides[i].classList.remove("active");
-                slides[i - 1].classList.add("active");
-                return i;
-            }
+        let i = getCurrentIndex();
+
+        if ( i !== 0 ) {
+            slides[i].classList.remove('active');
+            slides[i - 1].classList.remove('old');
+            slides[i - 1].classList.add('active');
+
+            return true;
         }
+
+        return false;
+    }
+
+    /*
+    * get the slides and store them in a variable
+    */
+    this.getSlides = function() {
+        slides = container.querySelectorAll(slideClass);
     }
 
     /*
     * get the current active slides index
     * @return: return index of current slide
     */
-    // TODO: refactor to look for index based on element with active class
     function getCurrentIndex() {
         console.log("slideshow.currentIndex");
         for ( let i = 0, n = slides.length; i < n; i++ ) {
             if ( slides[i].classList.contains("active") ) {
-                console.log(i);
                 return i;
             }
         }
@@ -53,7 +68,7 @@ function slideshow( container, slideClass) {
     * fires when instance is created
     */
     function constructor() {
-        slides = container.querySelectorAll(slideClass);
+        self.getSlides();
     }
 
     constructor();
