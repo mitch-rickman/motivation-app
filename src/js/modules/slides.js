@@ -11,7 +11,6 @@ function slideshow( container, slideClass) {
     * goto next slide
     * @return: return index of slide transitioning to or false
     */
-
     this.nextSlide = function() {
         let i = getCurrentIndex();
 
@@ -19,11 +18,10 @@ function slideshow( container, slideClass) {
             slides[i].classList.remove("active")
             slides[i].classList.add("old");
             slides[i + 1].classList.add("active");
-
-            return true;
         }
 
-        return false;
+        // return if there are more slides available after the transition
+        return i + 1 < slides.length - 1 ? true : false;
     }
 
     /*
@@ -37,11 +35,9 @@ function slideshow( container, slideClass) {
             slides[i].classList.remove('active');
             slides[i - 1].classList.remove('old');
             slides[i - 1].classList.add('active');
-
-            return true;
         }
 
-        return false;
+        return i - 1 <= 0 ? false : true;
     }
 
     /*

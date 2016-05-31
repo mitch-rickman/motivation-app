@@ -59,7 +59,7 @@
 
     &--secondary-solid {
         @extend .button;
-        background: #$grey--light;
+        background: $grey--light;
         border: 2px solid $grey--light;
         color: $text;
 

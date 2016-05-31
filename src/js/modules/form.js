@@ -1,0 +1,42 @@
+import {slideshow} from './slides';
+
+var form = {};
+form.slide = new slideshow( document.getElementById('slideshow'), ".slideshow__slide" );
+form.nextButton = document.getElementById('form-next');
+form.prevButton = document.getElementById('form-prev');
+form.submitButton = document.getElementById('form-submit');
+
+form.nextForm = function() {
+    var moreSlides = form.slide.nextSlide();
+    console.log(moreSlides);
+
+    if ( moreSlides ) {
+        form.nextButton.disabled = false;
+    }
+
+    else {
+        form.nextButton.disabled = true;
+    }
+
+    form.prevButton.disabled = false;
+}
+
+form.prevForm = function() {
+    var moreSlides = form.slide.previousSlide();
+
+    if ( moreSlides ) {
+        form.prevButton.disabled = false;
+    }
+
+    else {
+        form.prevButton.disabled = true;
+    }
+
+    form.nextButton.disabled = false;
+}
+
+form.nextButton = document.querySelectorAll('.form__footer #form-next')[0];
+form.prevButton = document.querySelectorAll('.form__footer #form-prev')[0];
+
+form.nextButton.addEventListener('click', form.nextForm);
+form.prevButton.addEventListener('click', form.prevForm);
