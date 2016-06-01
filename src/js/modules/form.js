@@ -1,4 +1,4 @@
-import {slideshow} from './slides';
+import {slideshow} from '../plugins/slides';
 
 var form = {};
 form.slide = new slideshow( document.getElementById('slideshow'), ".slideshow__slide" );
@@ -8,7 +8,6 @@ form.submitButton = document.getElementById('form-submit');
 
 form.nextForm = function() {
     var moreSlides = form.slide.nextSlide();
-    console.log(moreSlides);
 
     if ( moreSlides ) {
         form.nextButton.disabled = false;

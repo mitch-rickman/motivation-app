@@ -6,9 +6,11 @@
     height: 100vh;
     top: 0;
     left: 0;
+    opacity: 0;
     padding: 3em;
     box-sizing: border-box;
     text-align: center;
+    transition: opacity .5s ease-out;
 
     &:before {
         content: "";
